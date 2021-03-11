@@ -1,1 +1,0 @@
-This folder contains all the blog posts associated with blog posts. each file gets rendered as a seperate blog

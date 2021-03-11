@@ -15,7 +15,7 @@ export default function ProjectPreview({
   image,
 }: Props) {
   return (
-    <div className="w-2/6 h-80 bg-white text-black rounded-lg pl-4 pr-4 flex flex-col">
+    <div className="w-2/6 h-80 bg-white text-black rounded-lg pl-4 pr-4 flex flex-col mb-2 shadow-lg">
       <header className="pt-1">
         {categories.map((c) => (
           <span className="text-sm pr-2">{c}</span>

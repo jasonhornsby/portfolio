@@ -2,7 +2,6 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData, BlogData } from "../../lib/posts";
-import utilStyles from "../../styles/utils.module.scss";
 
 export default function Post({ postData }) {
   return (
@@ -11,9 +10,9 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingX1}>{postData.title}</h1>
+        <h1>{postData.title}</h1>
 
-        <div className={utilStyles.lightText}>
+        <div>
           <Date dateString={postData.date} />
         </div>
 

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { NextComponentType } from "next";
+import React, { ReactNode } from "react";
 
-type Props = {};
+type Props = {
+  children?: ReactNode;
+};
 
 export default function FullScreenDarkLayout(props: Props) {
   return (

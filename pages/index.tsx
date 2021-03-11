@@ -23,10 +23,7 @@ export default function Home({ allPostsData }) {
             <h2>Jason Hornsby</h2>
             <div className="h-20 flex flex-col justify-end">
               <Link href="projects">
-                <button
-                  exit="exit"
-                  className="text-md cursor-pointer flex-initial bg-black rounded-md text-white pl-4 pr-4 pt-2 pb-2 font-medium"
-                >
+                <button className="text-md cursor-pointer flex-initial bg-black rounded-md text-white pl-4 pr-4 pt-2 pb-2 font-medium">
                   Projects
                 </button>
               </Link>

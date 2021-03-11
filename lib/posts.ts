@@ -16,9 +16,6 @@ export interface BlogData {
 export function getSortedPostsData() {
     const filenames = fs.readdirSync(postsDirectory);
     let allPostsData = filenames.map((fileName: string) => {
-        if (fileName === 'readme.md') {
-            return null;
-        }
         const id = fileName.replace(/\.md$/, '')
 
         const fullPath = path.join(postsDirectory, fileName);

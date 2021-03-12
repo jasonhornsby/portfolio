@@ -18,10 +18,12 @@ export default function Stripedlayout(props: Props) {
         animate={{ opacity: 1 }}
         key="landing"
       >
-        <div className="w-1/5"></div>
-        <div className={cn("w-3", "mr-2", stripeClass)}></div>
-        <div className={cn("w-3", "mr-6", stripeClass)}></div>
-        <div className="flex h-full w-4/5">{props.children}</div>
+        <div className="w-1/12 md:w1/6"></div>
+        <div className={cn("w-3", "mr-1", "md:mr-2", stripeClass)}></div>
+        <div className={cn("w-3", "mr-2", "md:mr-6", stripeClass)}></div>
+        <div className="flex flex-1 h-full max-h-full overflow-y-auto p-4">
+          {props.children}
+        </div>
       </motion.div>
     </AnimatePresence>
   );

@@ -1,7 +1,9 @@
-import image from "next/image";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
+  id: string;
   categories: string[];
   title: string;
   description: string;
@@ -13,17 +15,23 @@ export default function ProjectPreview({
   title,
   description,
   image,
+  id,
 }: Props) {
   return (
-    <div className="w-2/6 h-80 bg-white text-black rounded-lg pl-4 pr-4 flex flex-col mb-2 shadow-lg">
-      <header className="pt-1">
-        {categories.map((c) => (
-          <span className="text-sm pr-2">{c}</span>
-        ))}
-      </header>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
+    <Link href={"/projects/" + id}>
+      <motion.div
+        whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
+        className="bg-white text-black rounded-lg pl-4 pr-4 flex flex-col mb-2 shadow-lg h-96 cursor-pointer"
+      >
+        <header className="pt-1">
+          {categories.map((c) => (
+            <span className="text-sm pr-2">{c}</span>
+          ))}
+        </header>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </motion.div>
+    </Link>
   );
 }
 

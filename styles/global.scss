@@ -14,3 +14,12 @@ h2 {
 h3 {
   @apply text-xl;
 }
+
+.renderedHtml {
+  h1 {
+    @apply text-lg;
+  }
+  h2 {
+    @apply text-xs;
+  }
+}

@@ -2,6 +2,7 @@
 title: "Demo project"
 description: "A short text snipped to explain what is going on here"
 image: "face.jpg"
+link: "google.com"
 categories:
   - Typescript
   - AI

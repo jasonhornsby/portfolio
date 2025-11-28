@@ -15,6 +15,26 @@
     }
 </script>
 
+<svelte:head>
+	<title>Jason Hornsby - Senior Software Engineer</title>
+	<meta name="description" content="Full-stack developer with 7+ years of experience building high quality, scalable products. Available for work in Melbourne, Australia." />
+	<meta name="author" content="Jason Hornsby" />
+	<meta name="theme-color" content="#000000" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Jason Hornsby - Senior Software Engineer" />
+	<meta property="og:description" content="Full-stack developer with 7+ years of experience building high quality, scalable products. Available for work in Melbourne, Australia." />
+	<meta property="og:url" content="https://jasonhornsby.com" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Jason Hornsby - Senior Software Engineer" />
+	<meta name="twitter:description" content="Full-stack developer with 7+ years of experience building high quality, scalable products. Available for work in Melbourne, Australia." />
+	
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://jasonhornsby.com" />
+</svelte:head>
 
 <main class="min-h-screen px-6 py-20 md:px-12 lg:px-24 flex flex-col gap-16">
 

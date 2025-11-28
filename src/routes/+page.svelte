@@ -134,12 +134,12 @@
                                     {/each}
                                 </div>
                                 <div class="mt-4 md:hidden">
-                                    <span class="inline-block rounded border border-primary/30 bg-primary/5 px-2 py-0.5 text-[0.625rem] font-medium uppercase tracking-wide text-primary/90 backdrop-blur-sm">
+                                    <span class="inline-block rounded border border-blue-400/40 bg-blue-500/10 px-2 py-0.5 text-[0.625rem] font-medium uppercase tracking-wide text-blue-600 backdrop-blur-sm">
                                         {project.status}
                                     </span>
                                 </div>
                             </div>
-                            <span class="hidden md:block md:absolute md:top-4 md:right-4 rounded border border-primary/30 bg-primary/5 px-2 py-0.5 text-[0.625rem] font-medium uppercase tracking-wide text-primary/90 backdrop-blur-sm">
+                            <span class="hidden md:block md:absolute md:top-0 md:right-0 rounded border border-blue-400/40 bg-blue-500/10 px-2 py-0.5 text-[0.625rem] font-medium uppercase tracking-wide text-blue-600 backdrop-blur-sm">
                                 {project.status}
                             </span>
                         </div>

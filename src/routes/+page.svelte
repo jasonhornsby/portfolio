@@ -49,7 +49,7 @@
                 <span class="text-sm text-muted-foreground ml-1">Available for work</span>
             </div>
         </div>
-        <h3 class="mt-3 text-xl font-medium text-primary">Senior Software Engineer</h3>
+        <h2 class="mt-3 text-xl font-medium text-primary">Senior Software Engineer</h2>
         <p class="mt-6 max-w-xl text-balance leading-relaxed text-muted-foreground">
             I'm a full-stack developer with a passion for building high quality, scalable products. With over 7+ years of experience, I've
             worked around the world, from Germany, through the US, India, and now hopefully in Melbourne, Australia.

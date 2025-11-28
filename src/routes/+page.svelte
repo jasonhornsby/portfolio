@@ -1,51 +1,9 @@
 <script lang="ts">
-	import { Github, Linkedin, Mail, ArrowUpRight, Phone } from "lucide-svelte";
+	import { ArrowUpRight } from "lucide-svelte";
 	import { toast } from "svelte-sonner";
+	import { workExperience, projects, socialLinks, type SocialLink } from "$lib/data";
 
-    const projects = [
-        {
-            name: 'Tekka',
-            description: 'Social platform to organise pickup soccer games around Melbourne',
-            url: 'https://playtekka.com',
-            tech: ['Svelte', 'SvelteKit', 'Tailwind CSS', 'Pocketbase', 'Caddy'],
-            status: 'Prototype complete, irl testing in January 2026',
-        },
-        {
-            name: 'Entreno',
-            description: 'SASS platform empowering personal coaches organise their sessions, improve their service and attract more clients',
-            url: 'https://entreno.app',
-            tech: ['Svelte', 'SvelteKit', 'Tailwind CSS', 'Pocketbase', 'Caddy'],
-            status: 'In development',
-        }
-    ];
-
-    const socialLinks = [
-        {
-            href: 'https://github.com/jasonhornsby',
-            label: 'GitHub',
-            icon: Github,
-        },
-        {
-            href: 'https://linkedin.com/in/jason-hornsby-541b13195/',
-            label: 'LinkedIn',
-            icon: Linkedin,
-        },
-        {
-            href: 'mailto:jasonhornsby@proton.me',
-            label: 'Email',
-            icon: Mail,
-            text: 'jasonhornsby@proton.me',
-        },
-        {
-            href: 'tel:+61478842412',
-            label: 'Phone',
-            icon: Phone,
-            text: '+61 478 842 412',
-        }
-    ];
-
-
-    async function handleClick(event: MouseEvent, link: typeof socialLinks[0]) {
+    async function handleClick(event: MouseEvent, link: SocialLink) {
         if (link.text) {
             try {
                 await navigator.clipboard.writeText(link.text);
@@ -100,7 +58,50 @@
 
     <section>
         <h2 class="mb-8 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-        Selected Projects
+            Work Experience and Roles
+        </h2>
+
+        <ul class="space-y-4">
+            {#each workExperience as role, index}
+                <li 
+                    class="animate-in fade-in slide-in-from-bottom-4" 
+                    style="animation-delay: {index * 100}ms; animation-fill-mode: backwards;"
+                >
+                    <article class="group relative block overflow-hidden rounded-xl border border-gray-200 bg-card p-6 transition-all duration-300 hover:border-primary/40 hover:bg-card/80 hover:shadow-lg hover:shadow-primary/5">
+                        <div class="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                        
+                        <div class="relative">
+                            <h3 class="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
+                                {role.title}
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{role.description}</p>
+
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                {#each role.skills as skill}
+                                    <span class="rounded-md bg-secondary/80 px-2.5 py-1 font-mono text-xs text-secondary-foreground">
+                                        {skill}
+                                    </span>
+                                {/each}
+                            </div>
+
+                            <div class="mt-4 pt-4 border-t border-gray-200/60">
+                                <p class="text-xs text-muted-foreground">
+                                    <span class="font-medium text-foreground">{role.company}</span>
+                                    <span class="mx-1.5">•</span>
+                                    <span>{role.location}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            {/each}
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="mb-8 text-sm font-medium uppercase tracking-widest text-muted-foreground">
+        Live Projects
         </h2>
 
         <ul class="space-y-4">

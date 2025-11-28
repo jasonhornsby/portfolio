@@ -46,6 +46,7 @@
 		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^6.2.0",
 		"lucide-svelte": "^0.555.0"
 	}
 }

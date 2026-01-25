@@ -13,7 +13,7 @@
 </script>
 
 <section class="flex min-h-dvh items-center justify-center flex-col">
-    <div class="flex w-full max-w-3xl flex-col items-center gap-6 text-center flex-1 justify-center">
+    <div class="flex w-full max-w-3xl flex-col items-start gap-6 text-start flex-1 justify-center">
         <h1 class="text-5xl font-bold tracking-tight sm:text-6xl">
             Hi, I'm Jason
         </h1>

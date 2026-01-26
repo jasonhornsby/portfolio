@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LandingCard from "$lib/components/landing-card/landing-card.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
 	import { sections } from "./sections";
 
 	const sectionTitles = sections.map((section) => section.title);
@@ -55,8 +56,19 @@
             {/each}
         </div>
 
-        <div>
-            <h2 class="text-xl font-bold tracking-tight sm:text-3xl">Let's work together</h2>
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl font-bold tracking-tight sm:text-3xl">Let's work together...</h2>
+			<div class="flex flex-col gap-2">
+				<a href="https://cal.eu/jason-hornsby-pgqlpi/30min" target="_blank" rel="noopener noreferrer" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
+					Schedule a meeting
+				</a>
+				<a href="mailto:jasonhornsby@proton.me" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
+					Email me
+				</a>
+				<a href="tel:+61478842412" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
+					Call me
+				</a>
+			</div>
         </div>
     </div>
     

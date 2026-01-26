@@ -12,6 +12,10 @@
             href: '/me',
         },
         {
+            label: 'Projects',
+            href: '/projects',
+        },
+        {
             label: 'Contact',
             href: '/contact',
         }
@@ -29,12 +33,15 @@
             <li>
                 <a
                     class={cn(
-                        "transition-colors hover:text-foreground focus-visible:outline-none text-sm focus-visible:ring-2 focus-visible:ring-ring",
+                        "inline-block transition-colors hover:text-foreground focus-visible:outline-none text-sm focus-visible:ring-2 focus-visible:ring-ring",
                         isActive && "font-bold"
                     )}
                     href={item.href}
                 >
-                    {item.label}
+                    <span aria-hidden="true" class="invisible block h-0 overflow-hidden font-bold">
+                        {item.label}
+                    </span>
+                    <span>{item.label}</span>
                 </a>
             </li>
         {/each}

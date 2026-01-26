@@ -1,70 +1,42 @@
 <script lang="ts">
-	import LandingCard, { type LandingCardContent } from "$lib/components/landing-card/landing-card.svelte";
+	import LandingCard from "$lib/components/landing-card/landing-card.svelte";
+	import { sections } from "./sections";
 
-    const sections: LandingCardContent[] = [
-        {
-            title: 'Full Stack Development',
-            id: 'full-stack-development',
-            skills: ["Angular", "Python", "Typescript", "Web fundamentals", "System Architecture", "Python", "Golang"],
-            description: `
-                I build high quality, scalable products using a range of technologies and 
-                frameworks in the web space. The majority of my career has been spent implementing
-                highly specialised mechanical engineering requirements into cloud applications.`,
-            highlights: [
-                {
-                    title: "Frontend Lead",
-                    description:
-                        "Lead the frontend team at SCALE GmbH—managed the entire development lifecycle from design to deployment.",
-                },
-                {
-                    title: "Fullstack Development",
-                    description: "Designed and shipped Svelte/Node applications for multiple projects (see Entreno.app, Tekka).",
-                },
-                {
-                    title: "Rollout Support",
-                    description:
-                        "Provided on-site support for rollouts of SCALE GmbH's SDM system at RIVIAN automotive. Diagnosing and fixing issues before they impacted the end users",
-                },
-            ],
-            places: [
-                {
-                    id: "dresden",
-                    lat: 51.04768312666119,
-                    lng: 13.799242368657875,
-                },
-                {
-                    id: "palo-alto",
-                    lat: 37.41926429897054,
-                    lng: -122.13783497416357,
-                },
-                {
-                    id: "jaipur",
-                    lat: 26.8585177924985,
-                    lng: 75.80463485143416,
-                },
-            ],
-        },
-        {
-            title: 'Product Development',
-            id: 'product-development',
-            skills: [],
-            description: "",
-            highlights: [],
-            places: [],
-        },
-        {
-            title: 'Team Leadership',
-            id: 'team-leadership',
-            skills: [],
-            description: "",
-            highlights: [],
-            places: [],
-        }
-    ]
+	const sectionTitles = sections.map((section) => section.title);
+	const sectionSkills = sections.flatMap((section) => section.skills);
+	const uniqueSectionSkills = [...new Set(sectionSkills)];
+	const pageTitle = "Jason Hornsby | Full Stack Developer";
+	const metaDescription = `Full stack developer focused on ${sectionTitles.join(
+		", ",
+	)}. Experience across ${sectionSkills.join(", ")}.`;
+	const metaKeywords = [...new Set([...sectionTitles, ...sectionSkills])].join(", ");
 </script>
 
+<svelte:head>
+	<title>{pageTitle}</title>
+	<meta name="description" content={metaDescription} />
+	<meta name="keywords" content={metaKeywords} />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Jason Hornsby" />
+
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={metaDescription} />
+	<meta property="og:type" content="website" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={metaDescription} />
+
+	{#each sectionTitles as sectionTitle}
+		<meta property="article:section" content={sectionTitle} />
+	{/each}
+	{#each uniqueSectionSkills as sectionSkill}
+		<meta property="article:tag" content={sectionSkill} />
+	{/each}
+</svelte:head>
+
 <section class="flex min-h-dvh items-center justify-center flex-col" id="home">
-    <div class="flex w-full max-w-3xl flex-col items-start gap-8 text-start flex-1 justify-center">
+    <div class="flex w-full max-w-4xl flex-col items-start gap-8 text-start flex-1 justify-center">
         <h1 class="text-5xl font-bold tracking-tight sm:text-6xl">
             Hi, I'm Jason
         </h1>

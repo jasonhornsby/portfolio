@@ -15,9 +15,9 @@
 
 
 
-<div class="min-h-dvh flex flex-col md:flex-row overflow-hidden max-h-dvh">
+<div class="min-h-dvh flex flex-col md:flex-row">
 	<Nav />
-	<main class="flex-1 min-h-dvh md:overflow-y-auto flex-col mx-4">
+	<main class="flex-1 min-h-dvh flex-col mx-4">
 		{@render children()}
 	</main>
 </div>

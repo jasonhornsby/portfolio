@@ -20,10 +20,12 @@
     let currentPath = $derived(page.url.pathname)
 </script>
 
-<nav class="h-dvh flex flex-col items-start justify-center ">
-    <ul class="flex flex-col items-start justify-center gap-4 px-6 py-4 text-base font-xs sm:text-lg">
+<nav class="sticky top-0 z-10 w-full bg-background flex flex-row items-center justify-start md:h-dvh md:w-auto md:flex-col md:items-start md:justify-center">
+    <ul class="flex flex-row items-center justify-start gap-4 px-6 py-4 text-base font-xs sm:text-lg md:flex-col md:items-start md:justify-center">
         {#each navItems as item}
-        {@const isActive = currentPath === item.href}
+        {@const isActive = item.href.startsWith("/#")
+            ? currentPath === "/"
+            : currentPath === item.href}
             <li>
                 <a
                     class={cn(

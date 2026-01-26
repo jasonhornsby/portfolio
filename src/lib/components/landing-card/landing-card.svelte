@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="self-stretch w-full md:w-[350px] p-0 overflow-hidden rounded-lg">
-                <Map center={[-5, 40]} zoom={0}>
+                <Map center={[-15, 40]} zoom={-0.3} options={{interactive: false}}>
                     {#each places as place}
                         <MapMarker longitude={place.lng} latitude={place.lat}>
                             <MarkerContent>

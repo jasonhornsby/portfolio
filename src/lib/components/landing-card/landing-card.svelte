@@ -69,7 +69,7 @@
                     </p>
                 </div>
             </div>
-            <div class="h-[250px] w-full md:w-[350px] p-0 overflow-hidden rounded-lg">
+            <div class="self-stretch w-full md:w-[350px] p-0 overflow-hidden rounded-lg">
                 <Map center={[-5, 40]} zoom={0}>
                     {#each places as place}
                         <MapMarker longitude={place.lng} latitude={place.lat}>

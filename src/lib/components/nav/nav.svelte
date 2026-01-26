@@ -5,7 +5,7 @@
     const navItems = [
         {
             label: 'Work',
-            href: '/',
+            href: '/#home',
         },
         {
             label: 'Me',

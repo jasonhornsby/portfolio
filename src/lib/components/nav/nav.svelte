@@ -8,10 +8,6 @@
             href: '/#home',
         },
         {
-            label: 'Me',
-            href: '/me',
-        },
-        {
             label: 'Projects',
             href: '/projects',
         },

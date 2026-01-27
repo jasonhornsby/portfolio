@@ -78,3 +78,15 @@
     <LandingCard {...section} />
 {/each}
 
+<section class="flex items-center justify-center pt-20 pb-32">
+	<div class="flex w-full max-w-4xl flex-col items-start gap-4 text-start">
+		<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Ready to build?</h2>
+		<p class="text-muted-foreground">
+			Open to new projects and collaborations. Let’s get started.
+		</p>
+		<a href="https://cal.eu/jason-hornsby-pgqlpi/30min" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
+			Schedule a call
+		</a>
+	</div>
+</section>
+

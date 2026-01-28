@@ -45,7 +45,7 @@
             <div class="flex-1 w-full flex flex-col gap-8">
                 {#each highlights as highlight}
                     <div class="rounded-lg bg-white/80 dark:bg-card/60">
-                        <h2 class="text-base font-semibold">{highlight.title}</h2>
+                        <h2 class="font-semibold text-2xl">{highlight.title}</h2>
                         <p class="text-xs text-muted-foreground mt-2 leading-relaxed">
                             {highlight.description}
                         </p>

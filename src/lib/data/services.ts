@@ -22,7 +22,7 @@ export const sections: LandingCardContent[] = [
     {
         title: "Full Stack Development",
         id: "full-stack-development",
-        skills: ["Angular", "Python", "Typescript", "Web fundamentals", "System Architecture", "Python", "Golang"],
+        skills: ["Angular", "React", "Svelte", "WASM", "Python", "Typescript", "Web fundamentals", "System Architecture", "Golang"],
         description: `
                 I deliver high-quality, scalable web applications using modern technologies and 
                 frameworks. Specializing in translating complex mechanical engineering requirements 
@@ -48,7 +48,7 @@ export const sections: LandingCardContent[] = [
     {
         title: "Product Development",
         id: "product-development",
-        skills: ["Requirements Analysis", "Product Management", "Agile"],
+        skills: ["Requirements Analysis", "Software Consulting", "Product Management", "Agile"],
         description: `
         I bridge the gap between technical teams and stakeholders, translating complex engineering requirements into actionable software features.
         `,

@@ -8,10 +8,6 @@
             href: '/#home',
         },
         {
-            label: 'Projects',
-            href: '/projects',
-        },
-        {
             label: 'Contact',
             href: '/contact',
         }

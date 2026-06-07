@@ -36,49 +36,26 @@
 </svelte:head>
 
 <section class="flex min-h-dvh items-center justify-center flex-col" id="home">
-    <div class="flex w-full max-w-4xl flex-col items-start gap-8 text-start flex-1 justify-center">
+    <div class="flex w-full max-w-4xl flex-col items-start gap-6 text-start flex-1 justify-center">
         <h1 class="text-5xl font-bold tracking-tight sm:text-6xl">
-            Hi, I'm Jason
+            Hi, I’m Jason
         </h1>
-        <p class="text-lg text-muted-foreground sm:text-xl">
-            I'm a full-stack developer with a passion for building high quality,
-            scalable products. With over 7+ years of experience, I've worked
-            around the world, from Germany, through the US, India, and now Australia.
+        <p class="text-base text-muted-foreground sm:text-lg max-w-xl leading-relaxed">
+            Full-stack developer with 7+ years of experience building high-quality,
+            scalable products across Germany, the US, India, and Australia.
         </p>
-        
-        <div class="flex flex-col gap-2">
-            <h2 class="text-xl font-bold tracking-tight sm:text-3xl">I do...</h2>
-            {#each sections as section, i}
-                <a href={`#${section.id}`} class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
-                    {section.title}
-                </a>
-            {/each}
-        </div>
-
-        <div class="flex flex-col gap-2">
-            <h2 class="text-xl font-bold tracking-tight sm:text-3xl">Let's work together...</h2>
-			<div class="flex flex-col gap-2">
-				<a href="/contact" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
-					Contact me
-				</a>
-			</div>
-        </div>
     </div>
-    
 </section>
 
 {#each sections as section}
     <LandingCard {...section} />
 {/each}
 
-<section class="flex items-center justify-center pt-20 pb-32">
-	<div class="flex w-full max-w-4xl flex-col items-start gap-4 text-start">
-		<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Ready to build?</h2>
-		<p class="text-muted-foreground">
-			Open to new projects and collaborations. Let’s get started.
-		</p>
-		<a href="https://cal.eu/jason-hornsby-pgqlpi/30min" class="text-lg text-muted-foreground sm:text-xl hover:text-primary font-bold">
-			Schedule a call
+<section class="flex items-center justify-center pt-16 pb-32">
+	<div class="flex w-full max-w-4xl flex-col items-start gap-3 text-start">
+		<h2 class="text-2xl font-bold tracking-tight">Ready to build?</h2>
+		<a href="/contact" class="text-base text-muted-foreground hover:text-foreground transition-colors">
+			Get in touch
 		</a>
 	</div>
 </section>

@@ -44,6 +44,9 @@
             Full-stack developer with 7+ years of experience building high-quality,
             scalable products across Germany, the US, India, and Australia.
         </p>
+        <a href="/contact" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Get in touch
+        </a>
     </div>
 </section>
 

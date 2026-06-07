@@ -19,6 +19,7 @@
 <PageSection
 	title="Get in touch"
 	description="Open to new projects and collaborations."
+	backlink="/"
 >
 	<div class="flex w-full max-w-4xl flex-col divide-y divide-border">
 		<a

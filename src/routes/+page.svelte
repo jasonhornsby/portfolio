@@ -1,7 +1,7 @@
 <script lang="ts">
-	const pageTitle = "Jason Hornsby | Full Stack Developer";
+	const pageTitle = "Jason Hornsby | Full Stack Engineer";
 	const metaDescription =
-		"Full-stack developer with 7+ years of experience building high-quality, scalable products across Germany, the US, India, and Australia.";
+		"Full-stack engineer with 7+ years of experience building high-quality, scalable products across Germany, the US, India, and Australia.";
 </script>
 
 <svelte:head>
@@ -25,7 +25,7 @@
             Hi, I’m Jason
         </h1>
         <p class="text-base text-muted-foreground sm:text-lg max-w-xl leading-relaxed">
-            Full-stack developer with 7+ years of experience building high-quality,
+            Full-stack engineer with 7+ years of experience building high-quality,
             scalable products across Germany, the US, India, and Australia.
         </p>
         <a href="/contact" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
